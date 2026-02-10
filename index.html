@@ -1,71 +1,234 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Nome do Psicólogo | Psicologia Clínica</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
+---
+layout: default
+title: "Psicóloga Clínica em Lisboa - Dra. Sofia Mendes"
+description: "Consultas de Psicologia Clínica em Lisboa. Psicoterapia Psico-dinâmica especializada em depressão, ansiedade e stress. Consultas presenciais e online."
+---
 
-    <nav>
-        <div class="container">
-            <a href="#" class="logo">Psicologia<span>Clínica</span></a>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contacto" class="btn-nav">Marcar Consulta</a></li>
-            </ul>
+{% include hero.html %}
+
+<!-- Serviços -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Áreas de Intervenção</h2>
+            <p class="section-subtitle">
+                Apoio psicológico especializado através da abordagem psico-dinâmica, 
+                focado nas suas necessidades individuais e bem-estar emocional.
+            </p>
         </div>
-    </nav>
-
-    <header class="hero">
-        <div class="container">
-            <h1>Cuidar da sua saúde mental é o primeiro passo para o equilíbrio.</h1>
-            <p>Apoio psicoterapêutico especializado para adultos e adolescentes em Lisboa e Online.</p>
-            <a href="#contacto" class="btn-primary">Agendar Sessão</a>
-        </div>
-    </header>
-
-    <section id="sobre" class="container">
-        <h2>Sobre Mim</h2>
-        <div class="sobre-content">
-            <div class="sobre-texto">
-                <p>Olá, sou o [Teu Nome], Psicólogo Clínico (Cédula OPP nº XXXX). Com foco na Terapia Cognitivo-Comportamental, ajudo os meus pacientes a navegarem por desafios emocionais e a reencontrarem o seu bem-estar.</p>
+        
+        <div class="grid grid-3">
+            <div class="service-card">
+                <div class="service-icon">🧠</div>
+                <h3 class="service-title">Depressão</h3>
+                <p class="service-description">
+                    Acompanhamento especializado para compreender e superar períodos de tristeza profunda, 
+                    perda de interesse e dificuldades emocionais.
+                </p>
             </div>
+            
+            <div class="service-card">
+                <div class="service-icon">💭</div>
+                <h3 class="service-title">Ansiedade</h3>
+                <p class="service-description">
+                    Tratamento de perturbações de ansiedade, preocupações excessivas, 
+                    ataques de pânico e medos limitantes.
+                </p>
             </div>
-    </section>
+            
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3 class="service-title">Stress</h3>
+                <p class="service-description">
+                    Gestão do stress ocupacional, pressão académica e sobrecarga emocional 
+                    através de estratégias eficazes.
+                </p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🌙</div>
+                <h3 class="service-title">Perturbações do Sono</h3>
+                <p class="service-description">
+                    Apoio no tratamento de insónias, dificuldades em adormecer e 
+                    problemas relacionados com o sono.
+                </p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🕊️</div>
+                <h3 class="service-title">Luto e Perdas</h3>
+                <p class="service-description">
+                    Acompanhamento em processos de luto, perdas significativas e 
+                    adaptação a mudanças difíceis.
+                </p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🌱</div>
+                <h3 class="service-title">Crises de Vida</h3>
+                <p class="service-description">
+                    Suporte em momentos de transição, crises existenciais e 
+                    decisões importantes na vida.
+                </p>
+            </div>
+        </div>
+        
+        <div class="text-center mt-3xl">
+            <a href="{{ '/servicos/' | relative_url }}" class="btn btn-outline">
+                Conhecer Todos os Serviços
+            </a>
+        </div>
+    </div>
+</section>
 
-    <section id="servicos" class="bg-light">
-        <div class="container">
-            <h2>Áreas de Atuação</h2>
-            <div class="grid-servicos">
+<!-- Sobre -->
+<section class="section section-gray">
+    <div class="container">
+        <div class="grid grid-2" style="align-items: center;">
+            <div>
+                <h2 style="color: #2C5F6F;">Sobre Mim</h2>
+                <p class="mb-lg" style="font-size: 1.125rem;">
+                    Sou a Dra. Sofia Mendes, psicóloga clínica com 8 anos de experiência 
+                    em psicoterapia psico-dinâmica. Acredito num espaço terapêutico seguro, 
+                    empático e sem julgamentos, onde possa explorar as suas dificuldades 
+                    e encontrar caminhos para o bem-estar.
+                </p>
+                <p class="mb-xl">
+                    A abordagem psico-dinâmica permite compreender os padrões emocionais 
+                    e relacionais que influenciam o seu presente, promovendo um autoconhecimento 
+                    profundo e mudanças duradouras.
+                </p>
+                <a href="{{ '/sobre/' | relative_url }}" class="btn btn-primary">
+                    Saber Mais Sobre Mim
+                </a>
+            </div>
+            <div>
                 <div class="card">
-                    <h3>Ansiedade</h3>
-                    <p>Gestão de ataques de pânico, ansiedade generalizada e fobias.</p>
-                </div>
-                <div class="card">
-                    <h3>Depressão</h3>
-                    <p>Acompanhamento no processo de luto e episódios depressivos.</p>
-                </div>
-                <div class="card">
-                    <h3>Terapia Online</h3>
-                    <p>Consultas seguras no conforto da sua casa, onde quer que esteja.</p>
+                    <h3 style="color: #2C5F6F; margin-bottom: 1rem;">Formação e Experiência</h3>
+                    <ul class="icon-list">
+                        <li>Licenciatura em Psicologia - Universidade de Lisboa</li>
+                        <li>Mestrado em Psicologia Clínica - ISPA</li>
+                        <li>Pós-graduação em Psicoterapia Psico-dinâmica</li>
+                        <li>Membro da Ordem dos Psicólogos Portugueses</li>
+                        <li>8 anos de prática clínica</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer id="contacto">
-        <div class="container">
-            <h2>Contacto</h2>
-            <p>Email: contacto@oseunome.pt</p>
-            <p>Localização: Avenida da Liberdade, Lisboa | Online</p>
-            <hr>
-            <p>&copy; 2026 [Teu Nome]. Todos os direitos reservados. Cédula OPP nº XXXX.</p>
+<!-- Modalidades -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Como Funciona</h2>
+            <p class="section-subtitle">
+                Ofereço consultas em formato presencial e online, adaptadas às suas necessidades.
+            </p>
         </div>
-    </footer>
+        
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">💻 Consultas Online</h3>
+                <div class="card-content">
+                    <p>
+                        Sessões por videochamada segura, ideais para quem prefere o conforto de casa 
+                        ou tem dificuldades de deslocação. Mesma qualidade e confidencialidade das consultas presenciais.
+                    </p>
+                    <ul class="icon-list mt-lg">
+                        <li>Flexibilidade de horários</li>
+                        <li>Sem deslocações</li>
+                        <li>Plataforma segura e privada</li>
+                        <li>Qualidade profissional garantida</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title">🏢 Consultas Presenciais</h3>
+                <div class="card-content">
+                    <p>
+                        Atendimento em dois consultórios em Lisboa, equipados para proporcionar 
+                        um ambiente acolhedor, privado e propício ao processo terapêutico.
+                    </p>
+                    <ul class="icon-list mt-lg">
+                        <li>Consultório Avenidas (Av. da República)</li>
+                        <li>Consultório Alcântara (Rua Prior do Crato)</li>
+                        <li>Espaços confortáveis e privativos</li>
+                        <li>Boa acessibilidade de transportes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-3xl">
+            <a href="{{ '/consultas/' | relative_url }}" class="btn btn-primary">
+                Ver Locais e Horários
+            </a>
+        </div>
+    </div>
+</section>
 
-</body>
-</html>
+<!-- Blog -->
+<section class="section section-gray">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Artigos Recentes</h2>
+            <p class="section-subtitle">
+                Reflexões e informações sobre saúde mental, psicologia e bem-estar.
+            </p>
+        </div>
+        
+        <div class="grid grid-3">
+            {% for post in site.posts limit:3 %}
+            <div class="post-card">
+                <div class="post-card-header">
+                    <p class="post-card-date">{{ post.date | date: "%d de %B de %Y" }}</p>
+                    <h3 class="post-card-title">
+                        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                    </h3>
+                    <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+                    {% if post.categories %}
+                    <div class="post-card-categories">
+                        {% for category in post.categories %}
+                        <span class="category">{{ category }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="post-card-footer">
+                    <a href="{{ post.url | relative_url }}" class="read-more">Ler artigo</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-3xl">
+            <a href="{{ '/blog/' | relative_url }}" class="btn btn-outline">
+                Ver Todos os Artigos
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+    <div class="container">
+        <div class="card text-center" style="max-width: 800px; margin: 0 auto;">
+            <h2 style="color: #2C5F6F;">Pronta para o Acompanhar</h2>
+            <p style="font-size: 1.125rem; margin-bottom: 2rem;">
+                Se procura apoio psicológico num espaço seguro e acolhedor, 
+                entre em contacto para agendar a sua primeira consulta.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="{{ '/contactos/' | relative_url }}" class="btn btn-primary">
+                    Marcar Consulta
+                </a>
+                <a href="tel:+351910234567" class="btn btn-outline">
+                    +351 910 234 567
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

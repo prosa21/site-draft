@@ -1,0 +1,57 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+description: Artigos sobre psicologia, saúde mental e bem-estar escritos pela Dra. Sofia Mendes, psicóloga clínica em Lisboa.
+---
+
+<div class="section-header" style="margin-bottom: 3rem;">
+    <p class="section-subtitle">
+        Reflexões, informações e dicas sobre saúde mental, psicologia e bem-estar emocional. 
+        Artigos escritos de forma acessível para ajudar a compreender melhor o funcionamento da mente humana.
+    </p>
+</div>
+
+{% if site.posts.size > 0 %}
+<div class="grid grid-2" style="margin-bottom: 3rem;">
+    {% for post in site.posts %}
+    <div class="post-card">
+        <div class="post-card-header">
+            <p class="post-card-date">{{ post.date | date: "%d de %B de %Y" }}</p>
+            <h2 class="post-card-title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h2>
+            <p class="post-card-excerpt">
+                {{ post.excerpt | strip_html | truncatewords: 30 }}
+            </p>
+            {% if post.categories %}
+            <div class="post-card-categories">
+                {% for category in post.categories %}
+                <span class="category">{{ category }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        <div class="post-card-footer">
+            <a href="{{ post.url | relative_url }}" class="read-more">Ler artigo completo</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="callout callout-info">
+    <p>Ainda não existem artigos publicados. Volte em breve para ler as próximas reflexões sobre psicologia e saúde mental.</p>
+</div>
+{% endif %}
+
+<!-- Newsletter (opcional - pode ser adicionado futuramente) -->
+<!--
+<div class="card text-center" style="max-width: 700px; margin: 4rem auto 0;">
+    <h3 style="color: #2C5F6F;">Receba os Novos Artigos</h3>
+    <p>Subscreva a newsletter para receber notificações sobre novos artigos diretamente no seu email.</p>
+    <form action="#" method="post" style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+        <input type="email" placeholder="O seu email" style="flex-grow: 1; padding: 0.75rem; border: 1px solid #E2E8F0; border-radius: 0.5rem;">
+        <button type="submit" class="btn btn-primary">Subscrever</button>
+    </form>
+</div>
+-->

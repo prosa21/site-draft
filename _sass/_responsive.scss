@@ -1,0 +1,149 @@
+// ============================================
+// Responsive Utilities
+// ============================================
+
+// Hide/Show utilities
+.hide-mobile {
+    @media (max-width: $breakpoint-md - 1) {
+        display: none !important;
+    }
+}
+
+.hide-tablet {
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1) {
+        display: none !important;
+    }
+}
+
+.hide-desktop {
+    @media (min-width: $breakpoint-lg) {
+        display: none !important;
+    }
+}
+
+.show-mobile {
+    display: block;
+    
+    @media (min-width: $breakpoint-md) {
+        display: none !important;
+    }
+}
+
+.show-tablet {
+    display: none;
+    
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1) {
+        display: block !important;
+    }
+}
+
+.show-desktop {
+    display: none;
+    
+    @media (min-width: $breakpoint-lg) {
+        display: block !important;
+    }
+}
+
+// Text alignment
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+@media (min-width: $breakpoint-md) {
+    .text-md-center {
+        text-align: center;
+    }
+    
+    .text-md-left {
+        text-align: left;
+    }
+    
+    .text-md-right {
+        text-align: right;
+    }
+}
+
+// Spacing utilities
+.mt-0 { margin-top: 0; }
+.mt-sm { margin-top: $spacing-sm; }
+.mt-md { margin-top: $spacing-md; }
+.mt-lg { margin-top: $spacing-lg; }
+.mt-xl { margin-top: $spacing-xl; }
+.mt-2xl { margin-top: $spacing-2xl; }
+.mt-3xl { margin-top: $spacing-3xl; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-sm { margin-bottom: $spacing-sm; }
+.mb-md { margin-bottom: $spacing-md; }
+.mb-lg { margin-bottom: $spacing-lg; }
+.mb-xl { margin-bottom: $spacing-xl; }
+.mb-2xl { margin-bottom: $spacing-2xl; }
+.mb-3xl { margin-bottom: $spacing-3xl; }
+
+.pt-0 { padding-top: 0; }
+.pt-sm { padding-top: $spacing-sm; }
+.pt-md { padding-top: $spacing-md; }
+.pt-lg { padding-top: $spacing-lg; }
+.pt-xl { padding-top: $spacing-xl; }
+.pt-2xl { padding-top: $spacing-2xl; }
+.pt-3xl { padding-top: $spacing-3xl; }
+
+.pb-0 { padding-bottom: 0; }
+.pb-sm { padding-bottom: $spacing-sm; }
+.pb-md { padding-bottom: $spacing-md; }
+.pb-lg { padding-bottom: $spacing-lg; }
+.pb-xl { padding-bottom: $spacing-xl; }
+.pb-2xl { padding-bottom: $spacing-2xl; }
+.pb-3xl { padding-bottom: $spacing-3xl; }
+
+// Flex utilities
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.gap-sm { gap: $spacing-sm; }
+.gap-md { gap: $spacing-md; }
+.gap-lg { gap: $spacing-lg; }
+.gap-xl { gap: $spacing-xl; }
+.gap-2xl { gap: $spacing-2xl; }

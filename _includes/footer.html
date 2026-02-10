@@ -1,0 +1,56 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section footer-about">
+                <h3>{{ site.professional.name }}</h3>
+                <p>{{ site.professional.title }}</p>
+                <p class="footer-specialization">{{ site.professional.specialization }}</p>
+                <p class="footer-opp">{{ site.professional.opp_number }}</p>
+            </div>
+            
+            <div class="footer-section footer-contact">
+                <h3>Contactos</h3>
+                <ul class="contact-list">
+                    <li>
+                        <a href="tel:{{ site.contact.phone | remove: ' ' }}">{{ site.contact.phone }}</a>
+                    </li>
+                    <li>
+                        <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+                    </li>
+                    <li>{{ site.contact.schedule }}</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section footer-locations">
+                <h3>Locais de Consulta</h3>
+                {% for location in site.contact.locations %}
+                <div class="location">
+                    <p class="location-name">{{ location.name }}</p>
+                    <p class="location-address">{{ location.address }}</p>
+                    <p class="location-postal">{{ location.postal }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <div class="footer-section footer-links">
+                <h3>Navegação</h3>
+                <ul class="footer-nav">
+                    {% for item in site.navigation %}
+                    <li>
+                        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="copyright">
+                &copy; {{ 'now' | date: "%Y" }} {{ site.professional.name }}. Todos os direitos reservados.
+            </p>
+            <p class="privacy-note">
+                Os dados pessoais partilhados são tratados com confidencialidade, de acordo com o Código Deontológico da Ordem dos Psicólogos Portugueses e o RGPD.
+            </p>
+        </div>
+    </div>
+</footer>

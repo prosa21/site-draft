@@ -1,0 +1,108 @@
+# Site settings
+title: Dra. Sofia Mendes - Psicologia Clínica
+description: >-
+  Psicóloga Clínica em Lisboa. Consultas presenciais e online.
+  Especializada em Psicoterapia Psico-dinâmica para tratamento de
+  depressão, ansiedade, stress e outras perturbações emocionais.
+author: Dra. Sofia Mendes
+email: consultas@sofiamendes.pt
+phone: "+351 910 234 567"
+
+# Build settings
+url: ""
+baseurl: ""
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Dra. Sofia Mendes"
+  - scope:
+      path: "pages"
+    values:
+      layout: "page"
+
+# Navigation
+navigation:
+  - title: Início
+    url: /
+  - title: Sobre Mim
+    url: /sobre/
+  - title: Serviços
+    url: /servicos/
+  - title: Consultas
+    url: /consultas/
+  - title: Blog
+    url: /blog/
+  - title: Contactos
+    url: /contactos/
+
+# Professional info
+professional:
+  name: "Dra. Sofia Mendes"
+  title: "Psicóloga Clínica"
+  specialization: "Psicoterapia Psico-dinâmica"
+  opp_number: "OPP nº 12345"
+  experience_years: 8
+
+# Contact info
+contact:
+  phone: "+351 910 234 567"
+  email: "consultas@sofiamendes.pt"
+  schedule: "Segunda a Sexta, 9h-20h"
+  locations:
+    - name: "Consultório Avenidas"
+      address: "Av. da República, 2450, 3º andar"
+      postal: "1050-123 Lisboa"
+      metro: "Metro Saldanha"
+    - name: "Consultório Alcântara"
+      address: "Rua Prior do Crato, 18, Sala 4"
+      postal: "1300-400 Lisboa"
+      metro: "Perto do LX Factory"
+
+# Services
+services:
+  approach: "Psicoterapia Psico-dinâmica"
+  modalities:
+    - "Consultas Presenciais"
+    - "Consultas Online"
+  conditions:
+    - "Depressão"
+    - "Ansiedade"
+    - "Stress"
+    - "Perturbações do Sono"
+    - "Luto e Perdas"
+    - "Crises de Vida e Transições"
+
+# Social media (optional - can be added later)
+# social:
+#   linkedin: ""
+#   instagram: ""
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - README.md
+  - PLANO.md

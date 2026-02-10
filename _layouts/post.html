@@ -1,0 +1,64 @@
+---
+layout: default
+---
+
+<article class="post">
+    <header class="post-header">
+        <div class="container">
+            <h1 class="post-title">{{ page.title }}</h1>
+            <div class="post-meta">
+                <time datetime="{{ page.date | date_to_xmlschema }}">
+                    {{ page.date | date: "%d de %B de %Y" }}
+                </time>
+                {% if page.author %}
+                <span class="post-author">por {{ page.author }}</span>
+                {% endif %}
+                {% if page.categories %}
+                <span class="post-categories">
+                    {% for category in page.categories %}
+                    <span class="category">{{ category }}</span>
+                    {% endfor %}
+                </span>
+                {% endif %}
+            </div>
+            {% if page.excerpt %}
+            <p class="post-excerpt">{{ page.excerpt }}</p>
+            {% endif %}
+        </div>
+    </header>
+    
+    <div class="post-content">
+        <div class="container">
+            {{ content }}
+        </div>
+    </div>
+    
+    <footer class="post-footer">
+        <div class="container">
+            {% if page.tags %}
+            <div class="post-tags">
+                <span class="tags-label">Tags:</span>
+                {% for tag in page.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+            
+            <div class="post-navigation">
+                {% if page.previous.url %}
+                <a href="{{ page.previous.url | relative_url }}" class="prev-post">
+                    <span class="nav-label">← Artigo anterior</span>
+                    <span class="nav-title">{{ page.previous.title }}</span>
+                </a>
+                {% endif %}
+                
+                {% if page.next.url %}
+                <a href="{{ page.next.url | relative_url }}" class="next-post">
+                    <span class="nav-label">Próximo artigo →</span>
+                    <span class="nav-title">{{ page.next.title }}</span>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </footer>
+</article>

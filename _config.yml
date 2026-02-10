@@ -9,8 +9,8 @@ email: consultas@sofiamendes.pt
 phone: "+351 910 234 567"
 
 # Build settings
-url: ""
-baseurl: ""
+url: "https://prosa21.github.io"
+baseurl: "/site-draft"
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
 

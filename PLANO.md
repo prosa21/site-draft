@@ -116,22 +116,30 @@ site-draft/
 
 ### Paleta de Cores
 
-**NOTA**: Tema acolhedor com cores quentes selecionado
+**NOTA**: Tema acolhedor com cores quentes vibrantes - REDESIGN COMPLETO
 
-**Primária**: Tons terrosos e quentes (acolhimento, conforto, confiança)
-- Principal: `#C97959` (terracota suave)
-- Principal escuro: `#A85C3F`
-- Accent: `#D4A574` (dourado quente)
+**Primária**: Tons terrosos e quentes vibrantes (acolhimento, conforto, energia positiva)
+- Principal: `#D4724F` (terracota vibrante)
+- Principal claro: `#E8A87C` (pêssego quente)
+- Principal escuro: `#B85A38` (terracota escuro)
 
-**Secundária**: Neutros quentes
-- Texto escuro: `#3D2E29`
-- Texto médio: `#5C4B43`
-- Background: `#FFF9F5` (off-white quente)
-- Branco: `#FFFFFF`
+**Acentos**: Tons dourados e coral
+- Accent principal: `#F4B860` (dourado mel)
+- Secundário quente: `#E8927C` (coral suave)
+- Terciário quente: `#F4D4A0` (creme dourado)
 
-**Destaques**:
-- Secundário suave: `#E8C5A8` (bege rosado)
-- Destaque claro: `#F4E4D7` (creme)
+**Neutros**: Tons marrons quentes
+- Texto escuro: `#3D2A26` (chocolate escuro)
+- Texto médio: `#6B4E45` (marrom médio)
+- Texto claro: `#9B8177` (marrom claro)
+- Background: `#FFF8F3` (off-white super quente)
+- Background alternativo: `#FFF0E6` (bege pêssego)
+- Bordas: `#F4DCC8` (bege rosado)
+
+**Utilitários**:
+- Success: `#B8A86D` (verde oliva quente)
+- Info: `#C9A87C` (bronze)
+- Warning: `#E89750` (laranja queimado)
 
 ### Tipografia
 

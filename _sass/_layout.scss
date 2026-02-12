@@ -22,12 +22,13 @@
 
 // Header
 .site-header {
-    background-color: $white;
-    box-shadow: $shadow-sm;
+    background: linear-gradient(to bottom, $white 0%, $background 100%);
+    box-shadow: 0 2px 8px rgba($primary-color, 0.15);
+    border-bottom: 2px solid $accent-color;
     position: sticky;
     top: 0;
     z-index: 100;
-    transition: box-shadow $transition-normal;
+    transition: all $transition-normal;
     
     .header-content {
         display: flex;
@@ -178,7 +179,7 @@
 
 // Footer
 .site-footer {
-    background-color: $text-dark;
+    background: linear-gradient(135deg, $primary-dark 0%, $text-dark 100%);
     color: $white;
     padding: $spacing-3xl 0 $spacing-xl;
     margin-top: $spacing-4xl;
@@ -279,7 +280,7 @@
 // Hero Section
 .hero {
     position: relative;
-    background: linear-gradient(135deg, $primary-color 0%, $primary-light 100%);
+    background: linear-gradient(135deg, $primary-color 0%, $secondary-warm 50%, $accent-color 100%);
     min-height: 600px;
     display: flex;
     align-items: center;
@@ -287,6 +288,20 @@
     text-align: center;
     color: $white;
     overflow: hidden;
+    
+    // Warm texture overlay
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+        z-index: 0;
+    }
     
     @media (min-width: $breakpoint-md) {
         min-height: 700px;
@@ -298,7 +313,8 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba($text-dark, 0.1);
+        background: rgba($primary-dark, 0.15);
+        z-index: 0;
     }
     
     .hero-content {
@@ -392,10 +408,10 @@
 
 // Page Header
 .page-header {
-    background: linear-gradient(to bottom, $background 0%, $white 100%);
+    background: linear-gradient(135deg, $background-alt 0%, $white 50%, $background-alt 100%);
     padding: $spacing-3xl 0 $spacing-2xl;
     text-align: center;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 3px solid $accent-color;
     
     .page-title {
         color: $primary-color;
@@ -416,10 +432,10 @@
 
 // Post Layout
 .post-header {
-    background: linear-gradient(to bottom, $background 0%, $white 100%);
+    background: linear-gradient(135deg, $background-alt 0%, $white 50%, $background-alt 100%);
     padding: $spacing-3xl 0 $spacing-2xl;
     text-align: center;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 3px solid $secondary-warm;
     
     .post-title {
         color: $primary-color;
@@ -440,11 +456,12 @@
         }
         
         .category {
-            background-color: rgba($primary-color, 0.1);
-            color: $primary-color;
+            background: linear-gradient(135deg, $accent-color 0%, $secondary-warm 100%);
+            color: $white;
             padding: $spacing-xs $spacing-md;
             border-radius: $border-radius-md;
             font-weight: $font-weight-medium;
+            box-shadow: 0 2px 4px rgba($accent-color, 0.3);
         }
     }
     

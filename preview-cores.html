@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Paleta Quente - Dra. Sofia Mendes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #FFF8F3;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(244, 184, 96, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(232, 146, 124, 0.05) 0%, transparent 50%);
+            background-attachment: fixed;
+            color: #3D2A26;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        h1 {
+            color: #D4724F;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #6B4E45;
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #D4724F 0%, #E8927C 50%, #F4B860 100%);
+            padding: 4rem 2rem;
+            border-radius: 1rem;
+            color: white;
+            text-align: center;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(212, 114, 79, 0.3);
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.125rem;
+            opacity: 0.95;
+        }
+        
+        .colors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .color-box {
+            background: linear-gradient(to bottom, #FFFFFF 0%, #FFF0E6 100%);
+            border: 2px solid #F4DCC8;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .color-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(212, 114, 79, 0.2);
+            border-color: #F4B860;
+        }
+        
+        .color-sample {
+            width: 100%;
+            height: 100px;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .color-name {
+            font-weight: 600;
+            color: #3D2A26;
+            margin-bottom: 0.5rem;
+        }
+        
+        .color-code {
+            font-family: monospace;
+            color: #6B4E45;
+            font-size: 0.875rem;
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            color: #D4724F;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #F4B860;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+            justify-content: center;
+        }
+        
+        .btn {
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .btn-primary {
+            background-color: #D4724F;
+            color: white;
+            border-color: #D4724F;
+        }
+        
+        .btn-primary:hover {
+            background-color: #B85A38;
+            border-color: #B85A38;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 114, 79, 0.3);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: #D4724F;
+            border-color: #D4724F;
+        }
+        
+        .btn-outline:hover {
+            background-color: #D4724F;
+            color: white;
+        }
+        
+        .card {
+            background: linear-gradient(to bottom right, #FFFFFF 0%, #FFF0E6 100%);
+            border: 2px solid #F4DCC8;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card h3 {
+            color: #D4724F;
+            margin-bottom: 1rem;
+        }
+        
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .tag {
+            background: linear-gradient(135deg, #F4B860 0%, #E8927C 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(244, 184, 96, 0.3);
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #B85A38 0%, #3D2A26 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Preview: Paleta de Cores Quentes</h1>
+        <p class="subtitle">Site Profissional - Dra. Sofia Mendes, Psicóloga Clínica</p>
+        
+        <div class="hero">
+            <h2>Bem-vinda ao Novo Design</h2>
+            <p>Um espaço acolhedor e quente para cuidar da sua saúde mental</p>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Cores Principais</h2>
+            <div class="colors-grid">
+                <div class="color-box">
+                    <div class="color-sample" style="background: #D4724F;"></div>
+                    <div class="color-name">Terracota Vibrante</div>
+                    <div class="color-code">#D4724F</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-sample" style="background: #E8A87C;"></div>
+                    <div class="color-name">Pêssego Quente</div>
+                    <div class="color-code">#E8A87C</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-sample" style="background: #B85A38;"></div>
+                    <div class="color-name">Terracota Escuro</div>
+                    <div class="color-code">#B85A38</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-sample" style="background: #F4B860;"></div>
+                    <div class="color-name">Dourado Mel</div>
+                    <div class="color-code">#F4B860</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-sample" style="background: #E8927C;"></div>
+                    <div class="color-name">Coral Suave</div>
+                    <div class="color-code">#E8927C</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-sample" style="background: #F4D4A0;"></div>
+                    <div class="color-name">Creme Dourado</div>
+                    <div class="color-code">#F4D4A0</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Botões</h2>
+            <div class="buttons">
+                <a href="#" class="btn btn-primary">Marcar Consulta</a>
+                <a href="#" class="btn btn-outline">Saber Mais</a>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Cards de Exemplo</h2>
+            <div class="card">
+                <h3>Psicoterapia Psico-dinâmica</h3>
+                <p>Acompanhamento especializado para compreender e superar períodos de tristeza profunda, perda de interesse e dificuldades emocionais através de uma abordagem humanizada.</p>
+                <div class="tags">
+                    <span class="tag">Depressão</span>
+                    <span class="tag">Ansiedade</span>
+                    <span class="tag">Stress</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Consultas Online e Presenciais</h3>
+                <p>Ofereço flexibilidade com consultas online seguras e presenciais em dois consultórios em Lisboa, adaptando-me às suas necessidades.</p>
+                <div class="tags">
+                    <span class="tag">Online</span>
+                    <span class="tag">Lisboa</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <h3>Dra. Sofia Mendes</h3>
+            <p>Psicóloga Clínica | OPP nº 12345</p>
+            <p style="margin-top: 1rem; opacity: 0.9;">+351 910 234 567 | consultas@sofiamendes.pt</p>
+        </div>
+    </div>
+</body>
+</html>

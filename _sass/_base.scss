@@ -2,22 +2,26 @@
 // Base Styles & Variables
 // ============================================
 
-// Color Palette - Tema Acolhedor (Cores Quentes)
-$primary-color: #C97959;
-$primary-light: #D4A574;
-$primary-dark: #A85C3F;
-$accent-color: #E8C5A8;
+// Color Palette - Tema Acolhedor (Cores Quentes Vibrantes)
+$primary-color: #D4724F;       // Terracota vibrante
+$primary-light: #E8A87C;       // Pêssego quente
+$primary-dark: #B85A38;        // Terracota escuro
+$accent-color: #F4B860;        // Dourado mel
 
-$text-dark: #3D2E29;
-$text-medium: #5C4B43;
-$text-light: #8B7B73;
-$background: #FFF9F5;
+$secondary-warm: #E8927C;      // Coral suave
+$tertiary-warm: #F4D4A0;       // Creme dourado
+
+$text-dark: #3D2A26;           // Marrom chocolate escuro
+$text-medium: #6B4E45;         // Marrom médio
+$text-light: #9B8177;          // Marrom claro
+$background: #FFF8F3;          // Off-white super quente
+$background-alt: #FFF0E6;      // Bege pêssego
 $white: #FFFFFF;
-$border-color: #F4E4D7;
+$border-color: #F4DCC8;        // Bege rosado
 
-$success: #9AB87A;
-$info: #8FABBD;
-$warning: #E89750;
+$success: #B8A86D;             // Verde oliva quente
+$info: #C9A87C;                // Bronze
+$warning: #E89750;             // Laranja queimado
 
 // Typography
 $font-heading: 'Playfair Display', serif;
@@ -103,6 +107,10 @@ body {
     line-height: $line-height-normal;
     color: $text-dark;
     background-color: $background;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba($accent-color, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba($secondary-warm, 0.05) 0%, transparent 50%);
+    background-attachment: fixed;
     overflow-x: hidden;
 }
 
@@ -196,19 +204,24 @@ em {
 }
 
 blockquote {
-    border-left: 4px solid $primary-color;
-    padding-left: $spacing-lg;
+    border-left: 5px solid $accent-color;
+    background: linear-gradient(to right, rgba($accent-color, 0.1) 0%, transparent 100%);
+    padding: $spacing-lg;
+    padding-left: $spacing-xl;
     margin: $spacing-xl 0;
     font-style: italic;
     color: $text-medium;
+    border-radius: 0 $border-radius-md $border-radius-md 0;
 }
 
 code {
     font-family: 'Courier New', monospace;
     font-size: 0.9em;
-    background-color: rgba($primary-color, 0.1);
+    background-color: $background-alt;
+    color: $primary-dark;
     padding: $spacing-xs $spacing-sm;
     border-radius: $border-radius-sm;
+    border: 1px solid $border-color;
 }
 
 pre {
@@ -228,14 +241,15 @@ pre {
 
 hr {
     border: none;
-    border-top: $border-width solid $border-color;
+    height: 3px;
+    background: linear-gradient(to right, transparent 0%, $accent-color 50%, transparent 100%);
     margin: $spacing-2xl 0;
 }
 
 // Selection
 ::selection {
-    background-color: rgba($primary-color, 0.2);
-    color: $text-dark;
+    background-color: $accent-color;
+    color: $white;
 }
 
 // Focus styles

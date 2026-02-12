@@ -2,15 +2,24 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div class="container">
-            <h1 class="hero-title">{{ site.professional.name }}</h1>
-            <p class="hero-subtitle">{{ site.professional.title }} | {{ site.professional.specialization }}</p>
-            <p class="hero-description">
-                Apoio psicológico especializado em Lisboa, com consultas presenciais e online. 
-                Um espaço seguro para cuidar da sua saúde mental e bem-estar emocional.
-            </p>
-            <div class="hero-actions">
-                <a href="{{ '/contactos/' | relative_url }}" class="btn btn-primary">Marcar Consulta</a>
-                <a href="{{ '/sobre/' | relative_url }}" class="btn btn-secondary">Sobre Mim</a>
+            <div class="hero-wrapper">
+                <div class="hero-text">
+                    <h1 class="hero-title">{{ site.professional.name }}</h1>
+                    <p class="hero-subtitle">{{ site.professional.title }} | {{ site.professional.specialization }}</p>
+                    <p class="hero-description">
+                        Apoio psicológico especializado em Lisboa, com consultas presenciais e online. 
+                        Um espaço seguro para cuidar da sua saúde mental e bem-estar emocional.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="{{ '/contactos/' | relative_url }}" class="btn btn-primary">Marcar Consulta</a>
+                        <a href="{{ '/sobre/' | relative_url }}" class="btn btn-secondary">Sobre Mim</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="{{ '/assets/images/dra-sofia-mendes.jpg' | relative_url }}" 
+                         alt="Dra. Sofia Mendes - Psicóloga Clínica" 
+                         class="psychologist-photo">
+                </div>
             </div>
         </div>
     </div>

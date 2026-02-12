@@ -15,7 +15,8 @@ Site profissional tipo cartão de visita em Jekyll para uma psicóloga clínica,
 ### Páginas Principais
 
 1. **Homepage (`index.html`)**
-   - Hero section com foto e call-to-action
+   - Hero section com foto da psicóloga e call-to-action
+   - **NOTA**: Foto da Dra. Sofia Mendes incluída no hero (`assets/images/dra-sofia-mendes.jpg`)
    - Resumo dos serviços
    - Últimos artigos do blog
    - Testemunhos (opcional)
@@ -115,15 +116,22 @@ site-draft/
 
 ### Paleta de Cores
 
-**Primária**: Azul petróleo/Verde sálvia (tranquilidade, confiança)
-- Principal: `#2C5F6F` ou `#4A7C7E`
-- Accent: `#7FA89B`
+**NOTA**: Tema acolhedor com cores quentes selecionado
 
-**Secundária**: Neutros
-- Texto escuro: `#2D3748`
-- Texto claro: `#4A5568`
-- Background: `#F7FAFC`
+**Primária**: Tons terrosos e quentes (acolhimento, conforto, confiança)
+- Principal: `#C97959` (terracota suave)
+- Principal escuro: `#A85C3F`
+- Accent: `#D4A574` (dourado quente)
+
+**Secundária**: Neutros quentes
+- Texto escuro: `#3D2E29`
+- Texto médio: `#5C4B43`
+- Background: `#FFF9F5` (off-white quente)
 - Branco: `#FFFFFF`
+
+**Destaques**:
+- Secundário suave: `#E8C5A8` (bege rosado)
+- Destaque claro: `#F4E4D7` (creme)
 
 ### Tipografia
 

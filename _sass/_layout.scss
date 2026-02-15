@@ -168,6 +168,7 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
             transition: color $transition-fast;
+            border-bottom: 1px solid transparent;
             
             &:hover,
             &.active {
@@ -175,7 +176,7 @@
             }
             
             &.active {
-                border-bottom: 1px solid $text-dark;
+                border-bottom-color: $text-dark;
             }
         }
     }

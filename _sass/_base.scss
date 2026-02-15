@@ -1,27 +1,41 @@
 // ============================================
 // Base Styles & Variables
 // ============================================
+//
+// Design inspired by Wholeness Collective Therapy Group
+// https://www.wholenesscollectivetherapy.com/
+//
+// FONTS:
+// - Headings: Cormorant Garamond (free alternative to Freight Display Pro)
+// - Body: Montserrat (free alternative to Brandon Grotesque)
+//
+// For a closer match to the original, consider using Adobe Fonts:
+// - Freight Display Pro for headings
+// - Brandon Grotesque for body text
+//
+// ============================================
 
-// Color Palette
-$primary-color: #2C5F6F;
-$primary-light: #4A7C7E;
-$primary-dark: #1A3A42;
-$accent-color: #7FA89B;
+// Color Palette - Wholeness Collective Style
+$primary-color: #2b2622;        // Warm dark brown/black (text)
+$primary-light: #5a504a;        // Lighter brown
+$primary-dark: #1a1612;         // Darker brown
+$accent-color: #dfd4c3;         // Beige/tan accent
 
-$text-dark: #2D3748;
-$text-medium: #4A5568;
-$text-light: #718096;
-$background: #F7FAFC;
+$text-dark: #2b2622;            // Warm dark brown
+$text-medium: #5a504a;          // Medium brown
+$text-light: #8a7f74;           // Light brown
+$background: #faf7f2;           // Cream/beige background
 $white: #FFFFFF;
-$border-color: #E2E8F0;
+$border-color: #e8e4dd;
 
 $success: #48BB78;
 $info: #4299E1;
 $warning: #ED8936;
 
-// Typography
-$font-heading: 'Playfair Display', serif;
-$font-body: 'Inter', sans-serif;
+// Typography - Wholeness Collective Style
+// Using Google Fonts alternatives: Cormorant Garamond (similar to Freight Display Pro) and Montserrat (similar to Brandon Grotesque)
+$font-heading: 'Cormorant Garamond', 'freight-display-pro', Georgia, serif;
+$font-body: 'Montserrat', 'brandon-grotesque', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 $font-size-base: 1rem;
 $font-size-sm: 0.875rem;
@@ -106,13 +120,14 @@ body {
     overflow-x: hidden;
 }
 
-// Typography
+// Typography - Wholeness Collective Style
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-heading;
-    font-weight: $font-weight-semibold;
+    font-weight: $font-weight-normal;
     line-height: $line-height-tight;
     color: $text-dark;
     margin-bottom: $spacing-md;
+    letter-spacing: -0.02em;
 }
 
 h1 {
@@ -246,4 +261,36 @@ hr {
 
 :focus:not(:focus-visible) {
     outline: none;
+}
+
+// ============================================
+// Utility Classes
+// ============================================
+
+.text-center {
+    text-align: center;
+}
+
+.mt-lg {
+    margin-top: $spacing-lg;
+}
+
+.mt-xl {
+    margin-top: $spacing-xl;
+}
+
+.mt-2xl {
+    margin-top: $spacing-2xl;
+}
+
+.mt-3xl {
+    margin-top: $spacing-3xl;
+}
+
+.mb-lg {
+    margin-bottom: $spacing-lg;
+}
+
+.mb-xl {
+    margin-bottom: $spacing-xl;
 }

@@ -2,16 +2,18 @@
 // Component Styles
 // ============================================
 
-// Buttons
+// Buttons - Wholeness Collective Style
 .btn {
     display: inline-block;
-    padding: $spacing-md $spacing-xl;
-    font-size: $font-size-base;
-    font-weight: $font-weight-medium;
+    padding: $spacing-md $spacing-2xl;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-normal;
     text-align: center;
     text-decoration: none;
-    border-radius: $border-radius-md;
-    border: 2px solid transparent;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: 1px solid transparent;
     cursor: pointer;
     transition: all $transition-fast;
     font-family: $font-body;
@@ -31,19 +33,17 @@
         background-color: $primary-dark;
         border-color: $primary-dark;
         color: $white;
-        transform: translateY(-2px);
-        box-shadow: $shadow-md;
     }
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: $white;
-    border-color: $white;
+    color: $primary-color;
+    border-color: $primary-color;
     
     &:hover {
-        background-color: $white;
-        color: $primary-color;
+        background-color: $primary-color;
+        color: $white;
     }
 }
 
@@ -58,22 +58,22 @@
     }
 }
 
-// Cards
+// Cards - Wholeness Collective Style
 .card {
     background-color: $white;
-    border-radius: $border-radius-lg;
-    box-shadow: $shadow-md;
+    border-radius: 0;
+    border: 1px solid $border-color;
     padding: $spacing-xl;
-    transition: transform $transition-fast, box-shadow $transition-fast;
+    transition: border-color $transition-fast;
     
     &:hover {
-        transform: translateY(-4px);
-        box-shadow: $shadow-xl;
+        border-color: $accent-color;
     }
 }
 
 .card-title {
     font-size: $font-size-2xl;
+    font-weight: $font-weight-normal;
     color: $primary-color;
     margin-bottom: $spacing-md;
 }
@@ -138,35 +138,35 @@
     }
 }
 
-// Service Cards
+// Service Cards - Wholeness Collective Style
 .service-card {
     background-color: $white;
-    border-radius: $border-radius-lg;
+    border-radius: 0;
     padding: $spacing-2xl;
     text-align: center;
-    box-shadow: $shadow-md;
-    transition: transform $transition-fast, box-shadow $transition-fast;
+    border: 1px solid $border-color;
+    transition: border-color $transition-fast;
     
     &:hover {
-        transform: translateY(-4px);
-        box-shadow: $shadow-xl;
+        border-color: $accent-color;
     }
     
     .service-icon {
         width: 60px;
         height: 60px;
         margin: 0 auto $spacing-lg;
-        background: linear-gradient(135deg, $primary-color, $primary-light);
+        background-color: $background;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: $font-size-2xl;
-        color: $white;
+        color: $text-dark;
     }
     
     .service-title {
         font-size: $font-size-xl;
+        font-weight: $font-weight-normal;
         color: $primary-color;
         margin-bottom: $spacing-md;
     }
@@ -174,23 +174,23 @@
     .service-description {
         color: $text-medium;
         line-height: $line-height-relaxed;
+        font-size: $font-size-sm;
     }
 }
 
-// Blog Post Card
+// Blog Post Card - Wholeness Collective Style
 .post-card {
     background-color: $white;
-    border-radius: $border-radius-lg;
-    box-shadow: $shadow-md;
+    border-radius: 0;
+    border: 1px solid $border-color;
     overflow: hidden;
-    transition: transform $transition-fast, box-shadow $transition-fast;
+    transition: border-color $transition-fast;
     display: flex;
     flex-direction: column;
     height: 100%;
     
     &:hover {
-        transform: translateY(-4px);
-        box-shadow: $shadow-xl;
+        border-color: $accent-color;
     }
     
     .post-card-header {

@@ -20,14 +20,14 @@
     min-height: 60vh;
 }
 
-// Header
+// Header - Wholeness Collective Style
 .site-header {
-    background-color: $white;
-    box-shadow: $shadow-sm;
+    background-color: $background;
+    border-bottom: 1px solid $border-color;
     position: sticky;
     top: 0;
     z-index: 100;
-    transition: box-shadow $transition-normal;
+    transition: all $transition-normal;
     
     .header-content {
         display: flex;
@@ -44,19 +44,21 @@
         .logo-name {
             font-family: $font-heading;
             font-size: $font-size-xl;
-            font-weight: $font-weight-semibold;
+            font-weight: $font-weight-normal;
             color: $primary-color;
             line-height: 1.2;
+            letter-spacing: -0.01em;
         }
         
         .logo-title {
             font-size: $font-size-sm;
             color: $text-medium;
-            font-weight: $font-weight-normal;
+            font-weight: $font-weight-light;
+            letter-spacing: 0.05em;
         }
         
         &:hover .logo-name {
-            color: $primary-light;
+            color: $text-medium;
         }
     }
     
@@ -115,14 +117,14 @@
         }
     }
     
-    // Navigation
+    // Navigation - Wholeness Collective Style
     .site-nav {
         position: fixed;
         top: 80px;
         left: 0;
         right: 0;
-        background-color: $white;
-        box-shadow: $shadow-lg;
+        background-color: $background;
+        border-bottom: 1px solid $border-color;
         max-height: 0;
         overflow: hidden;
         transition: max-height $transition-normal;
@@ -130,7 +132,7 @@
         @media (min-width: $breakpoint-md) {
             position: static;
             max-height: none;
-            box-shadow: none;
+            border-bottom: none;
         }
         
         &.active {
@@ -144,7 +146,7 @@
             
             @media (min-width: $breakpoint-md) {
                 display: flex;
-                gap: $spacing-xl;
+                gap: $spacing-2xl;
                 padding: 0;
             }
         }
@@ -161,24 +163,27 @@
             display: block;
             padding: $spacing-sm 0;
             color: $text-dark;
-            font-weight: $font-weight-medium;
+            font-size: $font-size-sm;
+            font-weight: $font-weight-normal;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
             transition: color $transition-fast;
             
             &:hover,
             &.active {
-                color: $primary-color;
+                color: $text-medium;
             }
             
             &.active {
-                font-weight: $font-weight-semibold;
+                border-bottom: 1px solid $text-dark;
             }
         }
     }
 }
 
-// Footer
+// Footer - Wholeness Collective Style
 .site-footer {
-    background-color: $text-dark;
+    background-color: $primary-color;
     color: $white;
     padding: $spacing-3xl 0 $spacing-xl;
     margin-top: $spacing-4xl;
@@ -276,16 +281,16 @@
     }
 }
 
-// Hero Section
+// Hero Section - Wholeness Collective Style
 .hero {
     position: relative;
-    background: linear-gradient(135deg, $primary-color 0%, $primary-light 100%);
+    background-color: $background;
     min-height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: $white;
+    color: $text-dark;
     overflow: hidden;
     
     @media (min-width: $breakpoint-md) {
@@ -298,7 +303,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba($text-dark, 0.1);
+        background: rgba($accent-color, 0.15);
     }
     
     .hero-content {
@@ -308,8 +313,10 @@
     }
     
     .hero-title {
-        color: $white;
+        color: $text-dark;
         font-size: $font-size-4xl;
+        font-weight: $font-weight-normal;
+        letter-spacing: -0.02em;
         margin-bottom: $spacing-md;
         
         @media (min-width: $breakpoint-md) {
@@ -318,13 +325,16 @@
     }
     
     .hero-subtitle {
-        font-size: $font-size-xl;
-        font-weight: $font-weight-medium;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-normal;
+        font-family: $font-body;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
         margin-bottom: $spacing-lg;
-        opacity: 0.95;
+        color: $text-medium;
         
         @media (min-width: $breakpoint-md) {
-            font-size: $font-size-2xl;
+            font-size: $font-size-xl;
         }
     }
     
@@ -333,8 +343,7 @@
         line-height: $line-height-relaxed;
         max-width: 700px;
         margin: 0 auto $spacing-2xl;
-        opacity: 0.9;
-        color: $white;
+        color: $text-medium;
     }
     
     .hero-actions {

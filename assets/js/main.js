@@ -50,15 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add active class to current nav item based on URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        const linkPath = new URL(link.href).pathname;
-        if (currentPath === linkPath || (currentPath.startsWith(linkPath) && linkPath !== '/')) {
-            link.classList.add('active');
-        }
-    });
+    // Active class is already set by Jekyll in the HTML template
+    // No need to add it via JavaScript
     
     // Header shadow on scroll
     const header = document.querySelector('.site-header');

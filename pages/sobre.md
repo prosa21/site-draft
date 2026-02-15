@@ -7,9 +7,19 @@ description: Conheça a Dra. Sofia Mendes, psicóloga clínica especializada em 
 
 ## Quem Sou
 
-Sou a **Dra. Sofia Mendes**, psicóloga clínica com cédula profissional OPP nº 12345, especializada em **Psicoterapia Psico-dinâmica**. Trabalho há 8 anos em contexto clínico, ajudando pessoas a compreenderem-se melhor, a lidarem com as suas dificuldades emocionais e a encontrarem um caminho para o bem-estar.
-
-Acredito profundamente que cada pessoa é única e que o processo terapêutico deve respeitar essa individualidade. O meu papel é criar um **espaço seguro, empático e sem julgamentos**, onde possa explorar os seus pensamentos, emoções e experiências de forma livre.
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-bottom: 2rem;">
+    <div>
+        <img src="{{ '/assets/images/psicologa-sofia-mendes.png' | relative_url }}" alt="Dra. Sofia Mendes - Psicóloga Clínica" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+    </div>
+    <div>
+        <p style="margin-top: 0;">
+            Sou a <strong>Dra. Sofia Mendes</strong>, psicóloga clínica com cédula profissional OPP nº 12345, especializada em <strong>Psicoterapia Psico-dinâmica</strong>. Trabalho há 8 anos em contexto clínico, ajudando pessoas a compreenderem-se melhor, a lidarem com as suas dificuldades emocionais e a encontrarem um caminho para o bem-estar.
+        </p>
+        <p>
+            Acredito profundamente que cada pessoa é única e que o processo terapêutico deve respeitar essa individualidade. O meu papel é criar um <strong>espaço seguro, empático e sem julgamentos</strong>, onde possa explorar os seus pensamentos, emoções e experiências de forma livre.
+        </p>
+    </div>
+</div>
 
 ---
 

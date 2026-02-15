@@ -353,6 +353,45 @@
         justify-content: center;
         flex-wrap: wrap;
     }
+    
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: $spacing-3xl;
+        align-items: center;
+        text-align: left;
+        
+        @media (min-width: $breakpoint-md) {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        @media (max-width: ($breakpoint-md - 1)) {
+            text-align: center;
+            
+            .hero-actions {
+                justify-content: center;
+            }
+        }
+    }
+    
+    .hero-text {
+        // All hero text elements are already styled above
+    }
+    
+    .hero-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        img {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: $border-radius-lg;
+            box-shadow: $shadow-lg;
+            object-fit: cover;
+        }
+    }
 }
 
 // Page Header

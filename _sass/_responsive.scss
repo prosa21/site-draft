@@ -147,3 +147,16 @@
 .gap-lg { gap: $spacing-lg; }
 .gap-xl { gap: $spacing-xl; }
 .gap-2xl { gap: $spacing-2xl; }
+
+// About page image grid responsive
+.page-content {
+    > div[style*="display: grid"] {
+        @media (max-width: $breakpoint-md - 1) {
+            display: block !important;
+            
+            > div:first-child {
+                margin-bottom: $spacing-xl;
+            }
+        }
+    }
+}
